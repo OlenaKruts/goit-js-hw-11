@@ -1,13 +1,5 @@
-//import axios from 'axios';
-//import Notiflix from 'notiflix';
-//import SimpleLightbox from 'simplelightbox';
-//import 'simplelightbox/dist/simple-lightbox.min.css';
-//import { renderGallery } from './js/render_gallery.js';
-//import { getCategory } from './js/get_category.js';
 import { loadMore } from './js/load_more_images.js';
 import { onSubmit } from './js/onSubmit.js';
-
-//const lightBox = new SimpleLightbox('.gallery a');
 
 const form = document.querySelector('#search-form');
 
