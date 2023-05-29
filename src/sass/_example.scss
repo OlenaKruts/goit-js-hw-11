@@ -2,7 +2,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: blue;
   color: #2f2f37;
   max-width: 960px;
   padding: 16px;
@@ -10,19 +10,168 @@
 
 .example code {
   font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px 0 20px 0;
+  background: linear-gradient(
+    300deg,
+    rgba(8, 92, 175, 0.7) 20%,
+    rgba(48, 238, 225, 0.737) 60%,
+    rgb(255, 242, 3) 80%
+  );
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+body {
+  background-color: rgb(249, 244, 137);
+}
+.field-search {
+  width: 300px;
+  height: 30px;
+  padding: 5px 5px 5px 15px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.button-search {
+  width: 100px;
+  height: 30px;
+  padding: 5px 5px 5px 15px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: rgb(255, 242, 3);
+  }
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 24px;
+  padding-top: 100px;
+}
+
+.photo-card {
+  flex-basis: calc((100% - 96px) / 5);
+
+  box-shadow: 0px 0px 5px 2px rgba(0, 4, 56, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgb(206, 245, 242);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 5px 2px rgba(249, 249, 251, 0.5);
+  }
+}
+.gallery-photo {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  column-gap: 5px;
+}
+
+.info-item {
+  display: flex;
+  flex-basis: calc((100% - 15px) / 4);
+  flex-direction: column;
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  display: flex;
+  font-weight: 400;
+}
+
+.message-end {
+  display: block;
+
+  margin: 30px 0 30px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(42, 24, 210);
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.load-more {
+  width: 160px;
+  height: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+
+  &:hover,
+  &:focus {
+    color: black;
+    background-color: rgb(255, 242, 3);
+  }
+
+  &.is-hidden {
+    display: none;
+  }
 }
