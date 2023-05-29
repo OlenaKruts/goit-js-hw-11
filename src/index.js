@@ -18,10 +18,6 @@ export const messageEnd = document.querySelector('.message-end');
 //const messageEnd = document.querySelector('.message-end');
 //console.log(messageEnd);
 
-// export const perPage = 5;
-// export let page = 0;
-// export let data = input.value.trim();
-
 export const galleryWrapper = document.querySelector('.gallery');
 
 export const perPage = 40;
